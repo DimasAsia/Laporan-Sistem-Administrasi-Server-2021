@@ -2,7 +2,7 @@
 ___
 Pada parktikum kali ini terdapat soal dengan keadaan seperti gambar berikut.
 
-![gambar soal](asset\soal.png)
+![gambar soal](asset/soal.png)
 
 Dari keadaan diatas kita melakukan perubahan pada soal latihan praktikum sesuai dengan soal praktikum yang telah di berikan. Soal praktikum dapat diaskes [Disini.](https://github.com/aldonesia/Sistem-Administrasi-Server-2021/blob/master/modul-1/soal_praktikum.md)
 
@@ -26,7 +26,7 @@ ___
         ```bash
         sudo lxc-ls -f
         ```
-        ![B1](asset\bukti1.jpg)
+        ![B1](asset/bukti1.jpg)
 - setting ip 10.0.3.103
 
      - masuk kedalam container dan buka network interfaces
@@ -35,14 +35,14 @@ ___
         sudo lxc-attach -n ubuntu_landing
         nano /etc/network/interfaces
         ```
-        ![B1.2](asset\bukti1.2.jpg)
+        ![B1.2](asset/bukti1.2.jpg)
     - restart network
 
         ```bash
         systemctl restart networking.service
         ifconfig
         ```
-        ![B1.3](asset\bukti1.3.jpg)
+        ![B1.3](asset/bukti1.3.jpg)
     - keluar dari ubuntu landing agar dapat menjalankan soal selanjutnya
 
         ```bash
@@ -64,7 +64,7 @@ ___
         ```bash
         sudo lxc-ls -f
         ```
-        ![B2.1](asset\bukti1.jpg)
+        ![B2.1](asset/bukti1.jpg)
 - install nginx dan nginx-extras 
 
     - install nginx dan nginx-extras di dalam container
@@ -81,14 +81,14 @@ ___
         apt install nano net-tools curl
         nano /etc/network/interfaces
         ```
-        ![B2.2](asset\bukti2.2.jpg)
+        ![B2.2](asset/bukti2.2.jpg)
     - restart network cek ip
 
         ```bash
         systemctl restart networking.service
         ifconfig
         ```
-        ![B2.3](asset\bukti2.3.jpg)
+        ![B2.3](asset/bukti2.3.jpg)
 
 ### 3. setting nginx debian_php5.6 dengan domain http://lxc_php5.dev dan buat keterangan lxc didalam nya
 ___
@@ -102,7 +102,7 @@ ___
         touch lxc_php5.6.dev
         nano lxc_php5.6.dev 
         ```
-        ![B3.1](asset\bukti3.1.jpg)
+        ![B3.1](asset/bukti3.1.jpg)
     - masuk kedalam direktori sites enable, membuat symbolic link file container dan melakukan test serta buka file direktori host
 
         ```bash
@@ -112,7 +112,7 @@ ___
    	    nginx -s reload
    	    nano /etc/hosts
         ```
-        ![B3.2](asset\bukti3.2.jpg)
+        ![B3.2](asset/bukti3.2.jpg)
     - masuk kedalam direktori html, membuat direktori lxc_php5.6 dan mengcopy code dari nginx-debian.html to index.html serta buka file index html
 
         ```bash
@@ -121,7 +121,7 @@ ___
         cp index.nginx-debian.html lxc_php5.6/index.html
         nano index.html
         ```
-        ![B3.3](asset\bukti3.3.jpg)
+        ![B3.3](asset/bukti3.3.jpg)
     - mengecek konektivitas ke URL
 
         ```bash
@@ -149,7 +149,7 @@ ___
         mv lxc_php5.6.dev lxc_landing.dev
         nano lxc_landing.dev
         ```
-        ![B4.1](asset\bukti4.1.jpg)
+        ![B4.1](asset/bukti4.1.jpg)
     - masuk ke dalam direktori sites enable, membuat symbolic link file container dan melakukan test serta buka file direktori host
 
         ```bash
@@ -159,7 +159,7 @@ ___
    	    nginx -s reload
    	    nano /etc/hosts
         ```
-        ![B4.2](asset\bukti4.2.jpg)
+        ![B4.2](asset/bukti4.2.jpg)
     - masuk ke dalam direktori var html dan ubah nama file lxc_php5.6 menjadi lxc_landing serta buka index html
 
         ```bash
@@ -167,7 +167,7 @@ ___
         mv lxc_php5.6 lxc_landing
         nano index.html
         ```
-        ![B4.3](asset\bukti4.3.jpg)
+        ![B4.3](asset/bukti4.3.jpg)
     - mengecek konektivitas ke URL
 
         ```bash
@@ -191,7 +191,7 @@ ___
         ```bash
         sudo lxc-ls -f
         ```
-        ![B5.1](asset\bukti1.jpg)
+        ![B5.1](asset/bukti1.jpg)
 ### 6. setting nginx pada vm sesuai soal 
 - setting nginx 
 
@@ -200,14 +200,14 @@ ___
         ```bash
         sudo nano /etc/hosts
         ```
-        ![B6.1](asset\bukti6.1.jpg)
+        ![B6.1](asset/bukti6.1.jpg)
      - masuk ke dalam direktori sites available dan buka vm local
 
         ```bash
         cd /etc/nginx/sites-available
         sudo nano vm.local
         ```
-        ![B6.2](asset\bukti6.2.jpg)
+        ![B6.2](asset/bukti6.2.jpg)
     - melakukan test serta mengecek konektivitas ke URL
 
         ```bash
@@ -219,13 +219,13 @@ ___
 - hasil test web 
     - mengakses http://vm.local
 
-        ![B7.1](asset\bukti7.1.png)
+        ![B7.1](asset/bukti7.1.png)
     - mengakses http://vm.local/blog
 
-        ![B7.2](asset\bukti7.2.png)
+        ![B7.2](asset/bukti7.2.png)
     - mengakses http://vm.local/app
 
-        ![B7.3](asset\bukti7.3.png)
+        ![B7.3](asset/bukti7.3.png)
 ### 8. Analisa soal terakhir
 - menjawab pertanyaan pada soal
     
