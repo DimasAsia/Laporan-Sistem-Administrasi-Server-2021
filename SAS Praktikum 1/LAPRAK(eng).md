@@ -181,6 +181,10 @@ ___
 ### 5. setting ubuntu landing to autostart when open the vm
 - setting config container
 
+    - stop the container
+        ```bash
+        sudo lxc-stop -n ubuntu_landing
+        ```
     - setting config auto start with lxc.start.auto = 1
 
         ```bash
@@ -191,10 +195,7 @@ ___
         sudo lxc-ls -f
         ```
         ![B5.1](asset/bukti1.jpg)
-    - stop the container
-        ```bash
-        sudo lxc-stop -n ubuntu_landing
-        ```
+   
 ### 6. setting nginx on vm according to the question
 - setting nginx 
 
