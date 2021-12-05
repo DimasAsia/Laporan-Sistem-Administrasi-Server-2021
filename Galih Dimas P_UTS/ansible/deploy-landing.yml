@@ -1,6 +1,0 @@
-- hosts: landing
-  vars:
-    destdir: '/var/www/html/landing/public'
-    domain: 'lxc_landing.dev'
-  roles:
-    - landing
