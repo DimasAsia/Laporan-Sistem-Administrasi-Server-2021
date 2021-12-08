@@ -1,6 +1,0 @@
-- hosts: blog
-  vars:
-    destdir: '/var/www/html/blog'
-    domain: 'lxc_php7.dev'
-  roles:
-    - wordpress
